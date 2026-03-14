@@ -1,7 +1,6 @@
 let currentSlide = 0;
 document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.carousel-slide');
-
+    const slides = document.querySelectorAll('.bgImg-slide');
     function changeSlide(direction) {
         if (slides.length === 0) return;
         
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[currentSlide].classList.add('active');
     }
     window.changeSlide = changeSlide;
-
     setInterval(() => changeSlide(1), 5000);
 });
 
